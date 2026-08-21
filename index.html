@@ -1,69 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como os Gatos Enxergam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessibilidade Web - Exemplo Prático</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>A Visão dos Gatos</h1>
+  <!-- Barra de Ferramentas de Acessibilidade -->
+  <header class="barra-acessibilidade">
+    <div class="container">
+      <button id="btn-contraste" aria-pressed="false">
+        Alto Contraste
+      </button>
+      <button id="btn-aumentar-texto" aria-label="Aumentar o tamanho do texto">
+        A+
+      </button>
+      <button id="btn-diminuir-texto" aria-label="Diminuir o tamanho do texto">
+        A-
+      </button>
+    </div>
+  </header>
 
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <h1>Acessibilidade na Web</h1>
     <p>
-        Os gatos têm uma visão incrível, perfeitamente adaptada para a natureza deles de caçadores crepusculares. A forma como eles enxergam a luz e as cores é bem diferente da nossa!
+      Garantir que a web seja acessível significa permitir que pessoas com diferentes 
+      capacidades visuais, motoras e cognitivas consigam navegar, entender e interagir 
+      com os conteúdos de forma autônoma.
     </p>
 
-    <h2>1. Visão Noturna: Eles Enxergam no Escuro?</h2>
-    <p>
-        <strong>Sim, os gatos têm uma excelente visão noturna!</strong> Eles não conseguem enxergar no escuro absoluto, mas precisam de apenas cerca de 1/6 da quantidade de luz que nós precisamos para ver no escuro.
-    </p>
-    <p>Isso acontece por dois motivos principais:</p>
-    <ul>
-        <li><strong>Mais Bastonetes:</strong> A retina dos gatos possui uma quantidade imensa de células chamadas bastonetes, que são responsáveis pela detecção de luz e movimento.</li>
-        <li><strong>Tapetum Lucidum:</strong> É uma camada reflexiva atrás da retina que funciona como um espelho. Ela reflete a luz que entra no olho de volta para as células fotorreceptoras, dando uma "segunda chance" para o olho captar a luz. É essa camada que faz os olhos deles brilharem no escuro quando bate uma luz!</li>
-    </ul>
+    <section class="card">
+      <h2>Testando os Recursos</h2>
+      <p>
+        Utilize os botões na barra superior para alternar a paleta de cores para o modo de 
+        <strong>Alto Contraste</strong> ou para ajustar a escala tipográfica do site.
+      </p>
+      <p>
+        Para saber mais sobre diretrizes globais de acessibilidade, acesse o 
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/pt" target="_blank" rel="noopener noreferrer">
+          Guia de Acessibilidade WCAG
+        </a>.
+      </p>
+    </section>
+  </main>
 
-    <h2>2. Como os Gatos Enxergam as Cores?</h2>
-    <p>
-        A visão de cores dos gatos é parecida com o daltonismo em humanos (especificamente a protanopia):
-    </p>
-    <ul>
-        <li><strong>Cores que eles vêem bem:</strong> Tons de azul, amarelo e cinza.</li>
-        <li><strong>Cores que eles não diferenciam:</strong> Vermelho, verde e rosa. Para um gato, uma maçã vermelha ou um brinquedo rosa aparecem em tons de cinza ou marrom/amarelado.</li>
-    </ul>
-
-    <h2>3. Resumo da Visão Felina vs. Humana</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Característica</th>
-                <th>Gatos</th>
-                <th>Humanos</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Visão Noturna</strong></td>
-                <td>Excelente (precisam de pouquíssima luz)</td>
-                <td>Fraca</td>
-            </tr>
-            <tr>
-                <td><strong>Cores</strong></td>
-                <td>Limitada (azul, amarelo, cinza)</td>
-                <td>Rica e variada (RGB)</td>
-            </tr>
-            <tr>
-                <td><strong>Detecção de Movimento</strong></td>
-                <td>Ultrarrápida e precisa</td>
-                <td>Moderada</td>
-            </tr>
-            <tr>
-                <td><strong>Alcance e Nitidez</strong></td>
-                <td>Foco melhor de perto (2 a 6 metros)</td>
-                <td>Excelente alcance e nitidez a distância</td>
-            </tr>
-        </tbody>
-    </table>
-
+  <!-- Vinculação do arquivo JS -->
+  <script src="script.js"></script>
 </body>
 </html>

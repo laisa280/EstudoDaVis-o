@@ -1,0 +1,102 @@
+html {
+  font-size: 100%; /* Padrão (16px) */
+  transition: font-size 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container centralizado para alinhar o conteúdo */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.25rem; /* Usando rem para acompanhar o zoom do texto */
+}
+
+/* ==========================================================================
+   2. BARRA E BOTÕES DE ACESSIBILIDADE
+   ========================================================================== */
+
+.barra-acessibilidade {
+  background-color: #004085;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barra-acessibilidade .container {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Estilização dos botões (#btn-contraste, #btn-aumentar-texto, #btn-diminuir-texto) */
+.barra-acessibilidade button {
+  background-color: #ffffff;
+  color: #004085;
+  border: 2px solid #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.barra-acessibilidade button:hover {
+  background-color: #e2e6ea;
+  border-color: #e2e6ea;
+}
+
+/* Foco visível para navegação via teclado (Tab) */
+.barra-acessibilidade button:focus {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   3. CLASSE DE ALTO CONTRASTE (Ativada via JavaScript)
+   ========================================================================== */
+
+/* Regras aplicadas quando a classe .alto-contraste é adicionada ao <body> */
+body.alto-contraste {
+  background-color: #000000 !important;
+  color: #ffff00 !important; /* Amarelo no preto garante o máximo contraste visual */
+}
+
+/* Ajustes da barra e dos botões em alto contraste */
+body.alto-contraste .barra-acessibilidade {
+  background-color: #121212;
+  border-bottom: 2px solid #ffff00;
+}
+
+body.alto-contraste button {
+  background-color: #000000;
+  color: #ffff00;
+  border: 2px solid #ffff00;
+}
+
+body.alto-contraste button:hover,
+body.alto-contraste button[aria-pressed="true"] {
+  background-color: #ffff00;
+  color: #000000;
+}
+
+/* Ajuste de links e elementos de destaque no modo alto contraste */
+body.alto-contraste a {
+  color: #00ffff !important; /* Ciano em fundo preto para boa visibilidade */
+}
+
+body.alto-contraste .card,
+body.alto-contraste caixas {
+  background-color: #000000;
+  border: 2px solid #ffff00;
+  color: #ffffff;
+}
